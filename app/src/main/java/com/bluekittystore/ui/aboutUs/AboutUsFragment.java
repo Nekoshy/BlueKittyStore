@@ -20,16 +20,11 @@ public class AboutUsFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        aboutUsViewModel =
-                new ViewModelProvider(this).get(AboutUsViewModel.class);
+        aboutUsViewModel =  new AboutUsViewModel();
         View root = inflater.inflate(R.layout.fragment_about_us, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
-        aboutUsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        final TextView textView = root.findViewById(R.id.text_aboutus);
+        textView.setText(aboutUsViewModel.getText());
+
         return root;
     }
 }

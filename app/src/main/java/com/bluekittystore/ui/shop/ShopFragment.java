@@ -20,16 +20,11 @@ public class ShopFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        shopViewModel =
-                new ViewModelProvider(this).get(ShopViewModel.class);
+        shopViewModel = new ShopViewModel();
+
         View root = inflater.inflate(R.layout.fragment_shop, container, false);
         final TextView textView = root.findViewById(R.id.text_gallery);
-        shopViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        textView.setText(shopViewModel.getText());
         return root;
     }
 }

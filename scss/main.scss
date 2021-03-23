@@ -25,3 +25,57 @@ body{
       font-weight: 500;
       text-align:center;
 }
+
+.main{
+      margin-top: 30px;
+      padding: 20px;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+}
+
+.news,.sale{
+      display: flex;
+      width: 100%;
+      flex-flow: row wrap;
+      &__text{
+            width: 100%;
+            margin-bottom: 18px;
+            text-align: center;
+            font-size: $font_mobile--l;
+      }
+      &__list{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            
+      }
+      &__item{
+            width: 80px;
+            height: 80px;
+            border: 2px rgba(0,0,0,.25) solid;
+            background-image: url('/media/kitty.png');
+            background-repeat: no-repeat;
+            
+      }
+}
+
+.sale{
+      margin-top:20px;
+}
+
+@media screen and (min-width:720px){
+      .news,.sale{
+            
+            &__item{
+                  width: 240px;
+                  height: 240px;
+                  border: 2px rgba(0,0,0,.25) solid;
+                  background-image: url('/media/kitty.png');
+                  background-repeat: repeat;
+                  
+            }
+      }
+ 
+}

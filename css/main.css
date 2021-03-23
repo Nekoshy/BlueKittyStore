@@ -14,7 +14,7 @@
   display: inline-block;
   cursor: pointer;
   background-color: transparent;
-  left: 15px;
+  left: 10px;
   top: 10px;
   z-index: 2;
   transition: transform .2s .2s ease-in-out;
@@ -104,17 +104,6 @@
   transform: translateY(0);
 }
 
-.nav--active::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.9);
-  filter: blur(10px);
-}
-
 body {
   background-color: #fd97c9;
   font-family: 'Lobster', cursive;
@@ -127,5 +116,55 @@ body {
   width: 100%;
   font-weight: 500;
   text-align: center;
+}
+
+.main {
+  margin-top: 30px;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.news, .sale {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+}
+
+.news__text, .sale__text {
+  width: 100%;
+  margin-bottom: 18px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.news__list, .sale__list {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.news__item, .sale__item {
+  width: 80px;
+  height: 80px;
+  border: 2px rgba(0, 0, 0, 0.25) solid;
+  background-image: url("/media/kitty.png");
+  background-repeat: no-repeat;
+}
+
+.sale {
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 720px) {
+  .news__item, .sale__item {
+    width: 240px;
+    height: 240px;
+    border: 2px rgba(0, 0, 0, 0.25) solid;
+    background-image: url("/media/kitty.png");
+    background-repeat: repeat;
+  }
 }
 /*# sourceMappingURL=main.css.map */

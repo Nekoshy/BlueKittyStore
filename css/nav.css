@@ -1,12 +1,3 @@
-*, *::after, *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  list-style: none;
-  outline: none;
-  border: none;
-}
-
 .hamburger {
   position: absolute;
   padding: 16px;
@@ -50,8 +41,4 @@
 .hamburger__inner::before {
   top: -6px;
 }
-
-body {
-  background-color: rgba(254, 212, 232, 0.33);
-}
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=nav.css.map */

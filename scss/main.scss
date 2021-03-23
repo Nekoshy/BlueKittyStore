@@ -7,3 +7,9 @@
       border: none;
       
 }
+@import './varible';
+@import './nav';
+
+body{
+      background-color: $main_color;
+}

@@ -1,0 +1,48 @@
+@import './varible';
+
+@mixin hamburger-line {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+
+}
+.hamburger{
+
+    position: absolute;
+    padding: 16px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    left: 20px;
+    top: 20px;
+    z-index: 2;
+
+    &__box{
+        width: 18px;
+        height: 12px;
+        display: inline-block;
+        position: relative;
+    }
+
+    &__inner{
+        @include hamburger-line;
+        left: 0;
+        top: 50%;
+
+        &::after,
+        &::before{
+            @include hamburger-line;
+            content: "";
+            left: 0;
+
+        }
+
+        &::after{
+            top:6px
+        }
+        &::before{
+            top:-6px;
+        }
+    }
+}

@@ -7,9 +7,21 @@
       border: none;
       
 }
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import './varible';
 @import './nav';
 
 body{
       background-color: $main_color;
+      font-family: 'Lobster', cursive;
+
+}
+
+.title_bar{
+      position: relative;
+      font-size:36px;
+      top:15px;
+      width:100%;
+      font-weight: 500;
+      text-align:center;
 }

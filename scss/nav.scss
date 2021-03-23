@@ -14,9 +14,10 @@
     display: inline-block;
     cursor: pointer;
     background-color: transparent;
-    left: 20px;
-    top: 20px;
+    left: 15px;
+    top: 10px;
     z-index: 2;
+    transition: transform .2s .2s ease-in-out;
 
     &__box{
         width: 18px;
@@ -29,12 +30,15 @@
         @include hamburger-line;
         left: 0;
         top: 50%;
+        transform: translateY(-50%);
+        transition: background-color .2s .2s ease-in-out;
 
         &::after,
         &::before{
             @include hamburger-line;
             content: "";
             left: 0;
+            transition: transform .2s .2s ease-in-out;
 
         }
 
@@ -43,6 +47,62 @@
         }
         &::before{
             top:-6px;
+        }
+    }
+
+    &--active{
+        transform: translateX(235px);
+        position: fixed;
+    }
+    &--active &__inner{
+        background-color: transparent;
+    }
+    &--active &__inner::before{
+        transform: translateY(6px) rotate(45deg);
+    }
+    &--active &__inner::after{
+        transform: translateY(-6px) rotate(-45deg);
+    }
+}
+
+.nav{
+    width: 320px;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1;
+    position: absolute;
+    top:0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: transform .3s .2s ease-in-out;
+
+   
+    &__list{
+        width:320px;
+        top:44px;
+        position: absolute;
+    }
+
+    &__link{
+        color: black;
+        text-decoration: none;
+        width:100%;
+        height: 44px;
+        text-align: center;
+        font-size: $font_mobile--xl;
+    }
+
+    &--active{
+        transform: translateY(0);
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            box-shadow: inset 0 0 2000px rgba(255, 255, 255, .9);
+            filter: blur(10px);
         }
     }
 }

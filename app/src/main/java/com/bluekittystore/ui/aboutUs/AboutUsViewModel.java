@@ -4,6 +4,6 @@ import androidx.lifecycle.ViewModel;
 
 public class AboutUsViewModel extends ViewModel {
     public String getText() {
-        return "sd";
+        return "About us";
     }
 }

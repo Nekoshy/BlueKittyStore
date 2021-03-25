@@ -4,6 +4,6 @@ import androidx.lifecycle.ViewModel;
 
 public class HomeViewModel extends ViewModel {
     public String getText() {
-        return "xd";
+        return "Home Fragment";
     }
 }

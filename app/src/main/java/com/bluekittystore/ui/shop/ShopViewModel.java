@@ -4,6 +4,6 @@ import androidx.lifecycle.ViewModel;
 
 public class ShopViewModel extends ViewModel {
     public String getText() {
-        return "dsadsa";
+        return "Shop fragment";
     }
 }

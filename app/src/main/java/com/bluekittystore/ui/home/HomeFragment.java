@@ -21,7 +21,6 @@ import com.bluekittystore.sql.SQLHelper;
 import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
-    SQLHelper sqlHelper = MainActivity.sqlHelper;
     private HomeViewModel homeViewModel;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -30,8 +29,7 @@ public class HomeFragment extends Fragment {
         final TextView textView = root.findViewById(R.id.text_home);
         textView.setText(homeViewModel.getText());
 
-        ArrayList<String> myData = sqlHelper.getAllFromDB(); //test
-        System.out.println(myData);
+        homeViewModel.testDB();
         return root;
     }
 }

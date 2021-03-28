@@ -14,6 +14,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.bluekittystore.R;
+import com.bluekittystore.sql.SQLHelper;
 
 public class HomeFragment extends Fragment {
 
@@ -25,6 +26,7 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         final TextView textView = root.findViewById(R.id.text_home);
         textView.setText(homeViewModel.getText());
+
 
 
         return root;

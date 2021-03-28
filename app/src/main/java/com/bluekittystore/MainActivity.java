@@ -1,9 +1,13 @@
 package com.bluekittystore;
 
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.Menu;
 import android.widget.Toast;
+
+import com.bluekittystore.sql.SQLHelper;
 import com.google.android.material.navigation.NavigationView;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -13,8 +17,13 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class MainActivity extends AppCompatActivity {
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
 
+public class MainActivity extends AppCompatActivity {
+    public static String databaseAdressIp;
+    public static SQLHelper sqlHelper;
     private AppBarConfiguration mAppBarConfiguration;
 
     @Override
@@ -33,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+        getConfigValue();
+        sqlHelper = new SQLHelper(this);
+
     }
 
     @Override
@@ -62,5 +74,19 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    public void getConfigValue() {
+        Resources resources = this.getResources();
+        try {
+            InputStream rawResource = resources.openRawResource(R.raw.config);
+            Properties properties = new Properties();
+            properties.load(rawResource);
+            databaseAdressIp = properties.getProperty("hostIp");
+        } catch (Resources.NotFoundException e) {
+            Log.e("config", "Unable to find the config file: " + e.getMessage());
+        } catch (IOException e) {
+            Log.e("config", "Failed to open config file.");
+        }
     }
 }

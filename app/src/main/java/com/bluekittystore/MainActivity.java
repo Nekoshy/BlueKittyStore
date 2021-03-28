@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.bluekittystore.sql.SQLHelper;
 import com.google.android.material.navigation.NavigationView;
+
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -29,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getConfigValue();
+        sqlHelper = new SQLHelper(this);
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -42,9 +47,6 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
-        getConfigValue();
-        sqlHelper = new SQLHelper(this);
-
     }
 
     @Override
@@ -55,18 +57,17 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.action_settings:
-                    onSettingsMenuClick();
+                onSettingsMenuClick();
                 break;
-
         }
 
         return super.onOptionsItemSelected(item);
     }
 
     private void onSettingsMenuClick() {
-        Toast.makeText(this,"Settings test",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Settings test", Toast.LENGTH_SHORT).show();
     }
 
     @Override

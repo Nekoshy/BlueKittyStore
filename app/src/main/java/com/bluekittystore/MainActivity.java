@@ -1,5 +1,6 @@
 package com.bluekittystore;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,7 +24,12 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class MainActivity extends AppCompatActivity {
-    public static String databaseAdressIp;
+    public static String databaseAddressIp;
+    public static String databaseName;
+    public static int databasePort;
+    public static String databaseUser;
+    public static String databasePassword;
+
     public static SQLHelper sqlHelper;
     private AppBarConfiguration mAppBarConfiguration;
 
@@ -83,7 +89,12 @@ public class MainActivity extends AppCompatActivity {
             InputStream rawResource = resources.openRawResource(R.raw.config);
             Properties properties = new Properties();
             properties.load(rawResource);
-            databaseAdressIp = properties.getProperty("hostIp");
+            databaseAddressIp = properties.getProperty("dbIp");
+            databasePort = Integer.parseInt(properties.getProperty("dbPort"));
+            databaseName = properties.getProperty("dbName");
+            databaseUser = properties.getProperty("dbUser");
+            databasePassword = properties.getProperty("dbPassword");
+
         } catch (Resources.NotFoundException e) {
             Log.e("config", "Unable to find the config file: " + e.getMessage());
         } catch (IOException e) {

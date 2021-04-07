@@ -5,6 +5,7 @@ import android.os.StrictMode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,27 +26,26 @@ import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
     private HomeViewModel homeViewModel;
-    private RecyclerView.LayoutManager layoutManager;
-    private RecyclerView newsRecyclerView;
-    private RecyclerViewAdapter recyclerViewAdapter;
     View root;
     private ArrayList<String> data = new ArrayList<>();
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel = new HomeViewModel();
         root = inflater.inflate(R.layout.fragment_home, container, false);
-
         data = homeViewModel.testDB();
         System.out.println(data);
-        initRecyclerViewNews();
+
+        ImageView newsImageFirst = root.findViewById(R.id.news_image_first);
+        ImageView newsImageSec = root.findViewById(R.id.news_image_sec);
+        ImageView newsImageThird = root.findViewById(R.id.news_image_third);
+
+        ImageView promImageFirst = root.findViewById(R.id.prom_image_first);
+        ImageView promImageSec = root.findViewById(R.id.prom_image_sec);
+        ImageView promImageThird = root.findViewById(R.id.prom_image_third);
+
+
         return root;
     }
 
-    private void initRecyclerViewNews() {
-        newsRecyclerView = root.findViewById(R.id.main_recyclerview_news);
-        layoutManager = new LinearLayoutManager(root.getContext(),LinearLayoutManager.HORIZONTAL,false);
-        recyclerViewAdapter = new RecyclerViewAdapter(data,root.getContext());
-        newsRecyclerView.setLayoutManager(layoutManager);
-        newsRecyclerView.setAdapter(recyclerViewAdapter);
-    }
+
 }

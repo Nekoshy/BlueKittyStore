@@ -14,8 +14,8 @@ public class HomeViewModel extends ViewModel {
         return "Home Fragment";
     }
 
-    public void testDB() {
+    public ArrayList<String> testDB() {
         ArrayList<String> myData = sqlHelper.getAllFromDB(); //test
-        System.out.println(myData);
+        return myData;
     }
 }

@@ -10,6 +10,8 @@
     <string name="menu_home">@string/app_name</string>
     <string name="menu_shop">Shop</string>
     <string name="menu_about_us">About us</string>
+    <string name="menu_contact">Contact</string>
+    <string name="menu_cart">Cart</string>
     <string name="main_title_news">News</string>
     <string name="main_title_prom">Promotions</string>
 </resources>

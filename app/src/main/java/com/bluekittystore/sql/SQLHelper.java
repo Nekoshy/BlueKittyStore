@@ -75,9 +75,9 @@ public class SQLHelper {
                     ArrayList<String> myData = new ArrayList<>();
                     Statement connectionStatement = connection.createStatement();
                     ResultSet resultSet = connectionStatement
-                            .executeQuery("SELECT * FROM SIELUSTESTTABLE");
+                            .executeQuery("SELECT * FROM DEJV");
                     while (resultSet.next()) {
-                        myData.add(resultSet.getString(2));
+                        myData.add(resultSet.getString(1));
                     }
                     return myData;
                 }

@@ -10,7 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import './varible';
 @import './nav';
-
+@import './store';
 body{
       background: linear-gradient(135deg, rgba(16,255,232,1) 10%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 70%, rgba(139,217,140,1) 90%);
       background-repeat: no-repeat;
@@ -35,6 +35,9 @@ body{
       flex-flow: column;
       justify-content: center;
       align-items: center;
+      &__header{
+           font-size: $font_mobile--xl; 
+      }
 }
 
 .news,.sale{

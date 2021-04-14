@@ -495,6 +495,32 @@
   cursor: pointer;
 }
 
+.summary__list {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  margin-top: 10px;
+}
+
+.summary__list_item {
+  width: 100%;
+  padding: 5px 0;
+}
+
+.summary__button {
+  margin-top: 10px;
+  font-size: 12px;
+  background-color: #f5f5f5;
+  border: 1px #6573db solid;
+  border-radius: 20px;
+  font-family: "Lobster", cursive;
+  box-shadow: 10px 5px 25px -5px rgba(0, 0, 0, 0.9);
+  width: 120px;
+  height: 24px;
+  cursor: pointer;
+}
+
 body {
   background: linear-gradient(135deg, #10ffe8 10%, white 30%, white 70%, #8bd98c 90%);
   background-repeat: no-repeat;

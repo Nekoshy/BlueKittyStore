@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACK,AAAD,cAAO,CAAA;EACH,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,aAAa;EACxB,eAAe,EAAE,KAAK;EACtB,UAAU,EAAE,IAAI;CACnB;;AACA,AAAD,mBAAY,CAAA;EACR,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,KAAK;CACjB",
+    "sources": [
+        "../scss/summary.scss"
+    ],
+    "names": [],
+    "file": "summary.css"
+}

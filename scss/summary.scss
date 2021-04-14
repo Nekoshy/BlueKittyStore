@@ -1,0 +1,26 @@
+.summary{
+    &__list{
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: start;
+        margin-top: 10px;
+    }
+    &__list_item{
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    &__button{
+        margin-top: 10px;
+        font-size: $font_mobile--s;
+        background-color: $white_color;
+        border: 1px $blue__color solid;
+        border-radius: 20px;
+        font-family: $font_style;
+        box-shadow: 10px 5px 25px -5px rgba(0,0,0,0.9);
+        width: 120px;
+        height: 24px;
+        cursor: pointer;
+    }
+}

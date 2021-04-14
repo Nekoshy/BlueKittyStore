@@ -1,0 +1,18 @@
+.order__list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+
+.order__item {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 5px 0px;
+}
+
+.order__label {
+  width: 30%;
+}
+/*# sourceMappingURL=order.css.map */

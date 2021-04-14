@@ -12,15 +12,17 @@
 @import './nav';
 
 body{
-      background-color: $main_color;
+      background: linear-gradient(135deg, rgba(16,255,232,1) 10%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 70%, rgba(139,217,140,1) 90%);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
       font-family: 'Lobster', cursive;
 
 }
 
 .title_bar{
-      position: relative;
+
       font-size:36px;
-      top:15px;
+      margin-top:15px;
       width:100%;
       font-weight: 500;
       text-align:center;

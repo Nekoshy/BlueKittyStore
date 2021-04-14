@@ -14,8 +14,8 @@
     display: inline-block;
     cursor: pointer;
     background-color: transparent;
-    left: 10px;
-    top: 10px;
+    left: 5px;
+    top: 5px;
     z-index: 2;
     transition: transform .2s .2s ease-in-out;
 
@@ -51,7 +51,7 @@
     }
 
     &--active{
-        transform: translateX(235px);
+        transform: translateX(255px);
         position: fixed;
     }
     &--active &__inner{

@@ -11,6 +11,7 @@
 @import './varible';
 @import './nav';
 @import './store';
+@import './about';
 
 body{
       background: $background__gradiet;
@@ -37,7 +38,8 @@ body{
       justify-content: center;
       align-items: center;
       &__header{
-           font-size: $font_mobile--xl; 
+           font-size: $font_mobile--xxl;
+           width: 100%; 
       }
 }
 

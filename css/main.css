@@ -171,6 +171,12 @@
   text-align: center;
 }
 
+.about_us__text {
+  width: 100%;
+  word-wrap: normal;
+  margin-top: 20px;
+}
+
 body {
   background: linear-gradient(135deg, #10ffe8 10%, white 30%, white 70%, #8bd98c 90%);
   background-repeat: no-repeat;
@@ -196,7 +202,8 @@ body {
 }
 
 .main__header {
-  font-size: 20px;
+  font-size: 32px;
+  width: 100%;
 }
 
 .news, .sale {

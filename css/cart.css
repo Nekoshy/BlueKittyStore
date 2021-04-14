@@ -1,0 +1,47 @@
+.cart__list_header {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  margin-top: 10px;
+}
+
+.cart__names_text {
+  width: 200px;
+  text-align: center;
+}
+
+.cart__prices_text {
+  width: 40px;
+  text-align: center;
+}
+
+.cart__count_text {
+  width: 40px;
+  text-align: center;
+}
+
+.cart__list_wrapper {
+  width: 280px;
+}
+
+.cart__list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cart__item {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.cart__name {
+  width: 200px;
+}
+
+.cart__img, .cart__price, .cart__count {
+  width: 40px;
+  height: 40px;
+}
+/*# sourceMappingURL=cart.css.map */

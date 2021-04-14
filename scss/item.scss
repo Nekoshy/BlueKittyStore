@@ -1,0 +1,104 @@
+.item{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100vw;
+    &__name{
+        width: 100%;
+        font-size: $font_mobile--m;
+    }
+
+    &__images{
+        height: 200px;
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        &--big,&--small{
+            border: 1px $blue__color solid;
+        
+            box-shadow: 3px 3px 10px 0px #000000;
+        }
+        &--big{
+            width: 200px;
+            height: 200px;
+        }
+        &--small{
+            width: 50px;
+            height: 50px;
+            &:nth-child(n+2){
+                margin-top: 5px;
+            }
+        }
+    }
+
+    &__list{
+        margin-left: 15px;
+    }
+    &__img{
+        width: 100%;
+        height: 100%;
+        border: none;
+        background: none;
+    }
+
+
+    &__values{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__price{
+
+        width: 90%;
+        font-size: $font_mobile--xl;
+    }
+
+    &__quantity{
+        width: 10%;
+        margin-right: 5px;
+        display: flex;
+        align-items: flex-end;
+        flex-flow: nowrap column;
+    }
+    &__arrow{
+        position: relative;
+        width: 20px;
+        text-align: center;
+        cursor: pointer;
+        &--up{
+            top:5px;
+        }
+        &--down{
+            transform: rotate(180deg);
+            bottom: 5px;
+        }
+    }
+
+    &__amount{
+        display: flex;
+        background-color: $white_color;
+        border: 1px $blue__color solid;
+        width: 20px;
+        height: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__add{
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    &__header{
+        font-size: $font_mobile--xl;
+    }
+    &__text{
+        font-size: $font_mobile--s;
+        margin-top: 10px;
+    }
+}

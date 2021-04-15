@@ -25,7 +25,7 @@
 
     <fragment
         android:id="@+id/nav_cart"
-        android:name="com.bluekittystore.ui."
-        android:label="@string/menu_about_us"
+        android:name="com.bluekittystore.ui.cart.CartFragmennt"
+        android:label="@string/menu_cart"
         tools:layout="@layout/fragment_about_us" />
 </navigation>

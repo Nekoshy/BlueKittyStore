@@ -6,227 +6,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="417dp"
+        android:layout_height="474dp"
+        tools:listitem="@layout/cart_row"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/button"
-        android:layout_width="160dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="85dp"
-        android:fontFamily="@font/lobster"
-        android:text="Zamow"
-        android:background="@color/purple_200"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="132dp"
+        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TableLayout
-        android:layout_width="362dp"
-        android:layout_height="325dp"
-        android:layout_marginTop="268dp"
-        android:layout_marginBottom="117dp"
-        android:gravity="center"
-        android:stretchColumns="0,1,2,3"
-        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="163dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="84dp"
+        android:text="Cena łączna : 200"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
 
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_margin="1dp"
-            android:layout_weight="1"
-            android:background="#000000">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_column="0"
-                android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:text=" Id "
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_column="1"
-                android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:text=" Name "
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_column="2"
-                android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:text="Amount"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_column="3"
-                android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:text="Price"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:textStyle="bold" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_margin="1dp"
-            android:layout_weight="1"
-            android:background="#000000">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_column="0"
-                android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:text=" Text"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_column="1"
-                android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:text=" Text"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_column="2"
-                android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:text=" Text"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_column="2"
-                android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:text=" Text"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-        </TableRow>
-
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_margin="1dp"
-            android:layout_weight="1"
-            android:background="#000000">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_column="0"
-                android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:text=" Text"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_column="1"
-                android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:text=" Text"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_column="2"
-                android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:text=" Text"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_column="2"
-                android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:text=" Text"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_margin="1dp"
-            android:layout_weight="1"
-            android:background="#000000">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_column="0"
-                android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:text=" Text"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_column="1"
-                android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:text=" Text"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_column="2"
-                android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:text=" Text"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_column="2"
-                android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:text=" Text"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-        </TableRow>
-
-
-    </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,22 +22,20 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginRight="20dp"
-            android:background="@color/black"
-            android:src="@drawable/dtc" />
+            android:src="@drawable/dtc"
+         />
 
         <ImageView
             android:id="@+id/news_image_sec"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginRight="20dp"
-            android:background="@color/black"
             android:src="@drawable/dtc" />
 
         <ImageView
             android:id="@+id/news_image_third"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@color/black"
             android:src="@drawable/dtc" />
     </LinearLayout>
 
@@ -71,7 +69,6 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginRight="20dp"
-            android:background="@color/black"
             android:src="@drawable/dtc" />
 
         <ImageView
@@ -79,14 +76,12 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_marginRight="20dp"
-            android:background="@color/black"
             android:src="@drawable/dtc" />
 
         <ImageView
             android:id="@+id/prom_image_third"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@color/black"
             android:src="@drawable/dtc" />
     </LinearLayout>
 

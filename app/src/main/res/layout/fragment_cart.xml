@@ -21,227 +21,210 @@
     <TableLayout
         android:layout_width="362dp"
         android:layout_height="325dp"
-        android:layout_marginStart="10dp"
         android:layout_marginTop="268dp"
-        android:layout_marginEnd="10dp"
         android:layout_marginBottom="117dp"
+        android:gravity="center"
+        android:stretchColumns="0,1,2,3"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:stretchColumns="0,1,2,3"
-        android:gravity="center">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TableRow
-            android:background="#000000"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_margin="1dp"
             android:layout_weight="1"
-            >
+            android:background="#000000">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="0"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
                 android:text=" Id "
-                android:layout_margin="1dp"
-                android:layout_column="0"
-                android:background="#FFFFFF"
-                android:textStyle="bold"
-                android:gravity="center"
-                />
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="1"
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
                 android:text=" Name "
-                android:layout_margin="1dp"
-                android:layout_column="1"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:textStyle="bold"
-                />
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Amount"
-                android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:textStyle="bold"
                 android:layout_column="2"
-                />
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="Amount"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Price"
-                android:layout_margin="1dp"
-                android:background="#FFFFFF"
-                android:gravity="center"
-                android:textStyle="bold"
                 android:layout_column="3"
-                />
+                android:layout_margin="1dp"
+                android:background="#FFFFFF"
+                android:gravity="center"
+                android:text="Price"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
-            android:background="#000000"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_margin="1dp"
             android:layout_weight="1"
-            >
+            android:background="#000000">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text=" Text"
-                android:layout_margin="1dp"
                 android:layout_column="0"
+                android:layout_margin="1dp"
                 android:background="#FFFFFF"
                 android:gravity="center"
-                />
+                android:text=" Text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text=" Text"
-                android:layout_margin="1dp"
                 android:layout_column="1"
+                android:layout_margin="1dp"
                 android:background="#FFFFFF"
                 android:gravity="center"
-                />
+                android:text=" Text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text=" Text"
+                android:layout_column="2"
                 android:layout_margin="1dp"
                 android:background="#FFFFFF"
                 android:gravity="center"
-                android:layout_column="2" />
+                android:text=" Text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text=" Text"
+                android:layout_column="2"
                 android:layout_margin="1dp"
                 android:background="#FFFFFF"
                 android:gravity="center"
-                android:layout_column="2" />
+                android:text=" Text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
         </TableRow>
 
 
-
         <TableRow
-            android:background="#000000"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_margin="1dp"
             android:layout_weight="1"
-            >
+            android:background="#000000">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text=" Text"
-                android:layout_margin="1dp"
                 android:layout_column="0"
+                android:layout_margin="1dp"
                 android:background="#FFFFFF"
                 android:gravity="center"
-                />
+                android:text=" Text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text=" Text"
-                android:layout_margin="1dp"
                 android:layout_column="1"
+                android:layout_margin="1dp"
                 android:background="#FFFFFF"
                 android:gravity="center"
-                />
+                android:text=" Text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text=" Text"
+                android:layout_column="2"
                 android:layout_margin="1dp"
                 android:background="#FFFFFF"
                 android:gravity="center"
-                android:layout_column="2" />
+                android:text=" Text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text=" Text"
+                android:layout_column="2"
                 android:layout_margin="1dp"
                 android:background="#FFFFFF"
                 android:gravity="center"
-                android:layout_column="2" />
+                android:text=" Text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
         </TableRow>
 
         <TableRow
-            android:background="#000000"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_margin="1dp"
             android:layout_weight="1"
-            >
+            android:background="#000000">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text=" Text"
-                android:layout_margin="1dp"
                 android:layout_column="0"
+                android:layout_margin="1dp"
                 android:background="#FFFFFF"
                 android:gravity="center"
-                />
+                android:text=" Text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text=" Text"
-                android:layout_margin="1dp"
                 android:layout_column="1"
+                android:layout_margin="1dp"
                 android:background="#FFFFFF"
                 android:gravity="center"
-                />
+                android:text=" Text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text=" Text"
+                android:layout_column="2"
                 android:layout_margin="1dp"
                 android:background="#FFFFFF"
                 android:gravity="center"
-                android:layout_column="2" />
+                android:text=" Text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text=" Text"
+                android:layout_column="2"
                 android:layout_margin="1dp"
                 android:background="#FFFFFF"
                 android:gravity="center"
-                android:layout_column="2" />
+                android:text=" Text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
         </TableRow>
 
 

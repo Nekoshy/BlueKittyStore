@@ -17,6 +17,8 @@
 
     <string name="product_name">Nazwa</string>
     <string name="product_price_solo">Cena / sztuka</string>
+    <string name="product_price">Cena</string>
+
     <string name="product_amount">Ilość</string>
 
 

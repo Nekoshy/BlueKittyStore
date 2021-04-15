@@ -28,4 +28,10 @@
         android:name="com.bluekittystore.ui.cart.CartFragmennt"
         android:label="@string/menu_cart"
         tools:layout="@layout/fragment_about_us" />
+
+    <fragment
+        android:id="@+id/nav_contact"
+        android:name="com.bluekittystore.ui.contact.ContactFragment"
+        android:label="@string/menu_contact"
+        tools:layout="@layout/fragment_contact" />
 </navigation>

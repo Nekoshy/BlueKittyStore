@@ -17,7 +17,7 @@ public class ContactFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         contactViewModel = new ContactViewModel();
-        View root = inflater.inflate(R.layout.c, container, false);
+        View root = inflater.inflate(R.layout.fragment_contact, container, false);
         return root;
     }
 

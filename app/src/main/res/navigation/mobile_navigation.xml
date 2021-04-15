@@ -22,4 +22,10 @@
         android:name="com.bluekittystore.ui.aboutUs.AboutUsFragment"
         android:label="@string/menu_about_us"
         tools:layout="@layout/fragment_about_us" />
+
+    <fragment
+        android:id="@+id/nav_cart"
+        android:name="com.bluekittystore.ui."
+        android:label="@string/menu_about_us"
+        tools:layout="@layout/fragment_about_us" />
 </navigation>

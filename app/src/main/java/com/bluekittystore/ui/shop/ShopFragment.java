@@ -33,11 +33,10 @@ public class ShopFragment extends Fragment {
         final TextView textView = view.findViewById(R.id.text_gallery);
         textView.setText(shopViewModel.getText());
 
-        ArrayList<String> date = new ArrayList<>(); //test data
-        date.add("test");
+
         RecyclerView recyclerView = view.findViewById(R.id.shop_recycleview);
 
-        ShopAdapter shopAdapter = new ShopAdapter(date,view);
+        ShopAdapter shopAdapter = new ShopAdapter(shopViewModel.getDate(),view);
         recyclerView.setAdapter(shopAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
 

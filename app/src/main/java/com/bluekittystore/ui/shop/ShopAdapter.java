@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -31,6 +32,8 @@ public class    ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder>
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        holder.itemName.setText(date.get(position));
+
 
     }
 
@@ -40,8 +43,10 @@ public class    ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder>
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+        TextView itemName;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            itemName = itemView.findViewById(R.id.textView_item_name);
         }
     }
 }

@@ -12,13 +12,13 @@
         android:layout_height="95dp">
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/shop_row_add_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:text="Button"
+            android:text="add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -45,7 +45,7 @@
             android:layout_marginTop="14dp"
             android:layout_marginBottom="14dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/button2"
+            app:layout_constraintEnd_toStartOf="@+id/shop_row_add_button"
             app:layout_constraintStart_toEndOf="@+id/imageView2"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.333">
@@ -61,7 +61,7 @@
                     android:text="@string/product_name" />
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/textView_item_name"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:text="test" />

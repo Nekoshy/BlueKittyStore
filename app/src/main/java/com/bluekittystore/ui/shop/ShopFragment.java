@@ -23,8 +23,8 @@ import java.util.ArrayList;
 public class ShopFragment extends Fragment {
 
     private ShopViewModel shopViewModel;
-    Context context;
-    View view;
+    private Context context;
+    private View view;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         shopViewModel = new ShopViewModel();
@@ -32,14 +32,15 @@ public class ShopFragment extends Fragment {
         context = view.getContext();
         final TextView textView = view.findViewById(R.id.text_gallery);
         textView.setText(shopViewModel.getText());
+        setUpRecyclerView();
 
+        return view;
+    }
 
+    private void setUpRecyclerView() {
         RecyclerView recyclerView = view.findViewById(R.id.shop_recycleview);
-
         ShopAdapter shopAdapter = new ShopAdapter(shopViewModel.getDate(),view);
         recyclerView.setAdapter(shopAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-
-        return view;
     }
 }

@@ -1,5 +1,6 @@
 package com.bluekittystore.ui.shop;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,17 +15,24 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.bluekittystore.R;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class ShopFragment extends Fragment {
 
     private ShopViewModel shopViewModel;
-
+    Context context;
+    View view;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         shopViewModel = new ShopViewModel();
-
-        View root = inflater.inflate(R.layout.fragment_shop, container, false);
-        final TextView textView = root.findViewById(R.id.text_gallery);
+        view = inflater.inflate(R.layout.fragment_shop, container, false);
+        context = view.getContext();
+        final TextView textView = view.findViewById(R.id.text_gallery);
         textView.setText(shopViewModel.getText());
-        return root;
+        ArrayList<String> date = new ArrayList<>();
+        date.add("test");
+        ShopAdapter shopAdapter = new ShopAdapter(date,view);
+        return view;
     }
 }

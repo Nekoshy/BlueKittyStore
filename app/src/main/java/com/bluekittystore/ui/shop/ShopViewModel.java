@@ -12,6 +12,9 @@ public class ShopViewModel extends ViewModel {
     public ArrayList<String> getDate(){
         ArrayList<String> date = new ArrayList<>(); //test data
         date.add("test");
+        date.add("dsa");
+        date.add("xxxx");
+
         return date;
     }
 }

@@ -4,7 +4,9 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,8 +35,12 @@ public class    ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder>
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.itemName.setText(date.get(position));
-
-
+        holder.addItemToCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(view.getContext(),date.get(position),Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -43,10 +49,12 @@ public class    ShopAdapter extends RecyclerView.Adapter<ShopAdapter.ViewHolder>
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView itemName;
+        private TextView itemName;
+        private Button addItemToCart;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             itemName = itemView.findViewById(R.id.textView_item_name);
+            addItemToCart = itemView.findViewById(R.id.shop_row_add_button);
         }
     }
 }

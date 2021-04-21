@@ -121,11 +121,11 @@
     width: 100%;
     flex-flow: row nowrap;
     position: unset;
-    height: 32px;
+    height: 100%;
   }
   .nav__link:first-child {
     display: none;
-    height: 32px;
+    height: 100%;
   }
 }
 
@@ -609,16 +609,15 @@ body {
 @media (min-width: 576px) {
   .title_bar {
     margin-top: 0px;
+    font-size: 42px;
   }
-}
-
-@media screen and (min-width: 720px) {
+  .news__text, .sale__text {
+    font-size: 32px;
+  }
   .news__item, .sale__item {
-    width: 240px;
-    height: 240px;
-    border: 2px rgba(0, 0, 0, 0.25) solid;
-    background-image: url("/media/kitty.png");
-    background-repeat: repeat;
+    width: 160px;
+    height: 160px;
+    background-position: center center;
   }
 }
 /*# sourceMappingURL=main.css.map */

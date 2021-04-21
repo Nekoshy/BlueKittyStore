@@ -82,21 +82,38 @@ body{
 @media (min-width: 576px){
       .title_bar{
             margin-top: 0px;
+            font-size: 42px;
       }
-}
-
-
-@media screen and (min-width:720px){
+      .main{
+            &__header{
+                  //TODO
+            }
+      
+      }
       .news,.sale{
-            
+            &__text{
+                  font-size: $font_mobile--xxl;
+            }
             &__item{
-                  width: 240px;
-                  height: 240px;
-                  border: 2px rgba(0,0,0,.25) solid;
-                  background-image: url('/media/kitty.png');
-                  background-repeat: repeat;
-                  
+                  width: 160px;
+                  height: 160px;
+                  background-position: center center;
             }
       }
- 
 }
+
+
+// @media screen and (min-width:720px){
+//       .news,.sale{
+            
+//             &__item{
+//                   width: 240px;
+//                   height: 240px;
+//                   border: 2px rgba(0,0,0,.25) solid;
+//                   background-image: url('/media/kitty.png');
+//                   background-repeat: repeat;
+                  
+//             }
+//       }
+ 
+// }

@@ -78,6 +78,14 @@ body{
       margin-top:20px;
 }
 
+
+@media (min-width: 576px){
+      .title_bar{
+            margin-top: 0px;
+      }
+}
+
+
 @media screen and (min-width:720px){
       .news,.sale{
             

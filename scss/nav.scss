@@ -96,3 +96,31 @@
         transform: translateY(0);
     }
 }
+
+
+@media (min-width: 576px) {
+    .hamburger{
+        display: none;
+       
+    }
+
+    .nav{
+        width: 100vw;
+        height: 32px;
+        transform: translateX(0%);
+        background-color: transparent;
+        padding: 5px;
+        position: unset;
+        &__list{
+            display: flex;
+            width: 100%;
+            flex-flow: row nowrap;
+            position: unset;
+            height: 100%;
+        }
+        &__link:first-child{
+            display: none;
+            height: 100%;
+        }
+    }
+}

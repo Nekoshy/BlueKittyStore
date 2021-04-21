@@ -104,6 +104,31 @@
   transform: translateY(0);
 }
 
+@media (min-width: 576px) {
+  .hamburger {
+    display: none;
+  }
+  .nav {
+    width: 100vw;
+    height: 32px;
+    transform: translateX(0%);
+    background-color: transparent;
+    padding: 5px;
+    position: unset;
+  }
+  .nav__list {
+    display: flex;
+    width: 100%;
+    flex-flow: row nowrap;
+    position: unset;
+    height: 32px;
+  }
+  .nav__link:first-child {
+    display: none;
+    height: 32px;
+  }
+}
+
 .store__header {
   width: 100vw;
   display: flex;
@@ -579,6 +604,12 @@ body {
 
 .sale {
   margin-top: 20px;
+}
+
+@media (min-width: 576px) {
+  .title_bar {
+    margin-top: 0px;
+  }
 }
 
 @media screen and (min-width: 720px) {

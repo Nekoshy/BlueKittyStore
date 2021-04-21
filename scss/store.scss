@@ -35,11 +35,13 @@
     width: 100vw;
     max-height: 100vh;
     padding: 10px 25px;
+    display: flex;
+    
     
     &__list{
         display: flex;
-        justify-content: space-between;
         flex-flow: wrap row;
+        justify-content: space-around;
     }
 
     &__item{
@@ -48,6 +50,7 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        margin: 0 5px;
     }
 
     &__frame{
@@ -66,5 +69,35 @@
         height: 25px;
         font-size:$font_mobile--s;
         text-align: center;
+    }
+}
+
+@media (min-width:576px){
+    .products{
+        &__item{
+            width: 150px;
+            height: 175px;
+            padding: 5px;
+        }
+
+        &__img{
+            width: 150px;
+            height: 150px;
+        }
+        &__figcaption{
+            font-size: $font_mobile--m;
+        }
+    }
+    .store{
+        &__button{
+            width: 100px;
+            height: 28px;
+            font-size: $font_mobile--m;
+        }
+        &__input{
+            width: 160px;
+            height: 28px;
+            font-size: $font_mobile--m;
+        }
     }
 }

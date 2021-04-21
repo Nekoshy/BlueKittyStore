@@ -503,6 +503,37 @@
   box-shadow: 10px 5px 25px -5px rgba(0, 0, 0, 0.9);
 }
 
+@media (min-width: 576px) {
+  .cart__list_header {
+    width: 90%;
+  }
+  .cart__list_wrapper {
+    width: 90%;
+  }
+  .cart__count_text, .cart__prices_text {
+    flex: 1 1 40px;
+  }
+  .cart__names_text {
+    flex: 5 1 200px;
+  }
+  .cart__item {
+    width: 100%;
+  }
+  .cart__name {
+    flex: 4 1 200px;
+    height: auto;
+  }
+  .cart__img, .cart__price, .cart__count {
+    flex: 1 1 40px;
+    height: auto;
+  }
+  .cart__img::before, .cart__price::before, .cart__count::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+  }
+}
+
 .order__list {
   width: 100%;
   display: flex;

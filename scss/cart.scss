@@ -73,3 +73,39 @@
 
     }
 }
+
+@media (min-width:576px){
+    .cart{
+        &__list_header{
+            width: 90%;
+        }
+        &__list_wrapper{
+            width: 90%;
+        }
+        &__count_text,&__prices_text{
+            flex:1 1 40px;
+            
+        }
+        &__names_text{
+            flex: 5 1 200px;
+           
+        }
+        &__item{
+            width: 100%;
+        }
+        &__name{
+            flex: 4 1 200px;
+            height: auto;  
+        }
+       
+        &__img,&__price,&__count{
+            flex:1 1 40px;
+            height: auto;
+            &::before{
+                content: "";
+                display: block;
+                padding-top: 100%;
+            }
+        }
+    }
+}

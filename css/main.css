@@ -944,4 +944,15 @@ __inner {
     align-items: flex-start;
   }
 }
+
+@media (min-width: 768px) {
+  .summary__list {
+    font-size: 24px;
+  }
+  .summary__button {
+    width: 160px;
+    height: 32px;
+    font-size: 20px;
+  }
+}
 /*# sourceMappingURL=main.css.map */

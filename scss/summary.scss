@@ -29,3 +29,23 @@
         align-items:flex-start
     }
 }
+@media (min-width:768px){   
+    .summary{
+        &__list{
+            font-size: $font_desktop--s;
+        }
+        &__button{
+            width: 160px;
+            height: 32px;
+            font-size: $font_mobile--l;
+        }
+    }
+    
+
+}
+@media (min-width:992px){
+      
+}
+@media (min-width:1200px){
+      
+}

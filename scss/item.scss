@@ -162,6 +162,7 @@
 
 @media (min-width:768px){
     .item{
+ 
         &__list{
             margin-top: 15px;
         }
@@ -206,8 +207,38 @@
 
 }
 @media (min-width:992px){
+    .item{
+        justify-content: flex-start;
+        &__left-side{
+            width: auto;
+            margin-right: 20px;
+        }
+    }
       
 }
 @media (min-width:1200px){
-      
+    .item{
+
+
+        &__list{
+            margin-top: 15px;
+        }
+        &__images{
+
+            &--big{
+                width: 400px;
+                height: 400px;
+            }
+            &--small{
+                width: 120px;
+                height: 120px;
+                margin: 5px 0px;
+                &:nth-child(2){
+                    margin: auto 20px;
+                }
+            }
+        }
+
+    }
+     
 }

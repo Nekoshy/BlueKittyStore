@@ -75,7 +75,7 @@ body {
       }
       .main {
             &__header {
-                  //TODO
+                  font-size: $font_mobile--xxl;
             }
       }
       .news,
@@ -95,6 +95,11 @@ body {
       .title_bar{
             font-size: $font_desktop--l;
       } 
+      .main{
+            &__header{
+                  font-size: $font_desktop--l;
+            }
+      }
       .news,.sale{
             &__text{
                   font-size: $font_desktop--m;

@@ -79,6 +79,9 @@ body {
     margin-top: 0px;
     font-size: 42px;
   }
+  .main__header {
+    font-size: 32px;
+  }
   .news__text,
   .sale__text {
     font-size: 32px;
@@ -93,6 +96,9 @@ body {
 
 @media (min-width: 768px) {
   .title_bar {
+    font-size: 48px;
+  }
+  .main__header {
     font-size: 48px;
   }
   .news__text, .sale__text {
@@ -475,6 +481,45 @@ __inner {
     width: 180px;
     height: 24px;
     font-size: 16px;
+    align-self: start;
+    transform: translate(10%, 50%);
+  }
+}
+
+@media (min-width: 768px) {
+  .contact__list {
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .contact__list:nth-child(2n) {
+    align-items: unset;
+  }
+  .contact__person {
+    width: 50%;
+    height: auto;
+  }
+  .contact__message {
+    margin-top: 20px;
+  }
+  .contact__header {
+    font-size: 36px;
+  }
+  .contact__text {
+    font-size: 20px;
+  }
+  .contact__input {
+    width: 300px;
+    height: 32px;
+    font-size: 20px;
+  }
+  .contact__textarea {
+    font-size: 20px;
+    max-width: 70%;
+  }
+  .contact__button {
+    width: 240px;
+    height: 32px;
+    font-size: 20px;
     align-self: start;
     transform: translate(10%, 50%);
   }

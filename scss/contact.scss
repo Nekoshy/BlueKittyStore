@@ -119,3 +119,53 @@
 
 
 }
+
+@media (min-width:768px){
+    .contact{
+        &__list{
+            flex-flow: row wrap;
+            justify-content: space-around;
+            &:nth-child(2n){
+                align-items: unset;
+            }
+        }
+        &__person{
+            width: 50%;
+            height: auto;
+        }
+        &__message{
+            margin-top: 20px;
+        }
+        &__header{
+            font-size: $font_desktop--m;
+        }
+        &__text{
+            font-size: $font_mobile--l;
+        }
+
+        &__input{
+            width: 300px;
+            height: 32px;
+            font-size: $font_mobile--l;
+        }
+        &__textarea{
+            font-size: $font_mobile--l;
+            max-width: 70%;
+        }
+
+        &__button{
+            width: 240px;
+            height: 32px;
+            font-size: $font_mobile--l;
+            align-self: start;
+            transform: translate(10%,50%);
+        }
+    }
+
+}
+@media (min-width:992px){
+      
+}
+@media (min-width:1200px){
+      
+}

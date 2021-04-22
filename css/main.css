@@ -110,6 +110,16 @@ body {
   }
 }
 
+@media (min-width: 992px) {
+  .news__text, .sale__text {
+    font-size: 36px;
+  }
+  .news__item, .sale__item {
+    width: 300px;
+    height: 300px;
+  }
+}
+
 .hamburger {
   position: absolute;
   padding: 16px;

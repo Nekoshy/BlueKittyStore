@@ -753,6 +753,9 @@ body {
 }
 
 @media (min-width: 576px) {
+  .order {
+    align-items: flex-start;
+  }
   .order__input {
     max-width: 240px;
   }
@@ -760,6 +763,11 @@ body {
     width: 160px;
     height: 28px;
     font-size: 16px;
+    margin-left: 100px;
+  }
+  .order__label {
+    width: auto;
+    margin-right: 10px;
   }
 }
 

@@ -44,6 +44,7 @@
 @media (min-width:576px)
 {
     .order{
+        align-items: flex-start;
         &__input{
             max-width: 240px;
         }
@@ -51,6 +52,12 @@
             width: 160px;
             height: 28px;
             font-size: $font_mobile--m;
+            margin-left: 100px;
+        }
+        &__label{
+            width: auto;
+            margin-right: 10px;
         }
     }
+    
 }

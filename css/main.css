@@ -796,4 +796,10 @@ body {
   height: 24px;
   cursor: pointer;
 }
+
+@media (min-width: 567px) {
+  .summary {
+    align-items: flex-start;
+  }
+}
 /*# sourceMappingURL=main.css.map */

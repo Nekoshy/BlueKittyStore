@@ -923,6 +923,20 @@ __inner {
   }
 }
 
+@media (min-width: 768px) {
+  .order__input {
+    max-width: 300px;
+    height: 32px;
+  }
+  .order__button {
+    width: 220px;
+    height: 28px;
+  }
+  .order__label {
+    font-size: 24px;
+  }
+}
+
 .summary__list {
   width: 100%;
   display: flex;

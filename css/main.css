@@ -80,7 +80,7 @@ body {
     font-size: 42px;
   }
   .main__header {
-    font-size: 32px;
+    font-size: 24px;
   }
   .news__text,
   .sale__text {
@@ -699,6 +699,46 @@ __inner {
   }
   .item__desc {
     align-self: stretch;
+  }
+}
+
+@media (min-width: 768px) {
+  .item__list {
+    margin-top: 15px;
+  }
+  .item__images--big {
+    width: 330px;
+    height: 330px;
+  }
+  .item__images--small {
+    width: 100px;
+    height: 100px;
+    margin: 5px 0px;
+  }
+  .item__images--small:nth-child(2) {
+    margin: auto 15px;
+  }
+  .item__price {
+    font-size: 32px;
+  }
+  .item__arrow {
+    width: 30px;
+    font-size: 24px;
+  }
+  .item__amount {
+    width: 30px;
+    height: 30px;
+  }
+  .item__add {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+  .item__header {
+    font-size: 36px;
+  }
+  .item__text {
+    font-size: 20px;
   }
 }
 

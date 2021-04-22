@@ -161,6 +161,48 @@
 }
 
 @media (min-width:768px){
+    .item{
+        &__list{
+            margin-top: 15px;
+        }
+        &__images{
+
+            &--big{
+                width: 330px;
+                height: 330px;
+            }
+            &--small{
+                width: 100px;
+                height: 100px;
+                margin: 5px 0px;
+                &:nth-child(2){
+                    margin: auto 15px;
+                }
+            }
+        }
+        &__price{
+            font-size: $font_mobile--xxl;
+        }
+        &__arrow{
+            width: 30px;
+            font-size: $font_mobile--xl;
+        }
+        &__amount{
+            width: 30px;
+            height: 30px;
+        }
+        &__add{
+            width: 40px;
+            height: 40px;
+            font-size: $font_desktop--s;
+        }
+        &__header{
+            font-size: $font_desktop--m;
+        }
+        &__text{
+            font-size: $font_mobile--l;
+        }
+    }
 
 }
 @media (min-width:992px){

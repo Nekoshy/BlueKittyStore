@@ -75,7 +75,7 @@ body {
       }
       .main {
             &__header {
-                  font-size: $font_mobile--xxl;
+                  font-size: $font_mobile--xl;
             }
       }
       .news,
@@ -108,6 +108,7 @@ body {
                   width: 200px;
                   height: 200px;
             }
+
       }
 }
 @media (min-width:992px){

@@ -101,3 +101,38 @@
         }
     }
 }
+
+@media (min-width:768px){
+    .store{
+        &__button{
+            width: 160px;
+            height: 32px;
+            font-size: $font_mobile--l;
+        }
+        &__input{
+            width: 220px;
+            height: 32px;
+            font-size: $font_mobile--l;
+        }
+    }
+    
+    .products{
+        &__item{
+            width: 200px;
+            height: 250px;
+        }
+        &__img{
+            width: 200px;
+            height: 200px;
+        }
+        &__figcaption{
+            font-size: $font_mobile--xl;
+        }
+    }
+}
+@media (min-width:992px){
+      
+}
+@media (min-width:1200px){
+      
+}

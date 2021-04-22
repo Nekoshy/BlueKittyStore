@@ -91,6 +91,27 @@ body {
       }
 }
 
+@media (min-width:768px){
+      .title_bar{
+            font-size: $font_desktop--l;
+      } 
+      .news,.sale{
+            &__text{
+                  font-size: $font_desktop--m;
+            }
+            &__item{
+                  width: 200px;
+                  height: 200px;
+            }
+      }
+}
+@media (min-width:992px){
+      
+}
+@media (min-width:1200px){
+      
+}
+
 @import "./nav";
 @import "./store";
 @import "./about";

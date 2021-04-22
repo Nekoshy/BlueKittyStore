@@ -752,6 +752,17 @@ body {
   cursor: pointer;
 }
 
+@media (min-width: 576px) {
+  .order__input {
+    max-width: 240px;
+  }
+  .order__button {
+    width: 160px;
+    height: 28px;
+    font-size: 16px;
+  }
+}
+
 .summary__list {
   width: 100%;
   display: flex;

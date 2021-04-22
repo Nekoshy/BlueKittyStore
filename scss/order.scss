@@ -40,3 +40,17 @@
         cursor: pointer;
     }
 }
+
+@media (min-width:576px)
+{
+    .order{
+        &__input{
+            max-width: 240px;
+        }
+        &__button{
+            width: 160px;
+            height: 28px;
+            font-size: $font_mobile--m;
+        }
+    }
+}

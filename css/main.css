@@ -371,6 +371,12 @@ __inner {
   margin-top: 20px;
 }
 
+@media (min-width: 768px) {
+  .about_us__text {
+    font-size: 24px;
+  }
+}
+
 .contact__people {
   width: 100%;
 }

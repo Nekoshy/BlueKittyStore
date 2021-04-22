@@ -7,6 +7,11 @@
 }
 
 @media (min-width:768px){
+    .about_us{
+        &__text{
+            font-size: $font_desktop--s;
+        }
+    }
 
 }
 @media (min-width:992px){

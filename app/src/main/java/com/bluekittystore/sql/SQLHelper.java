@@ -22,22 +22,22 @@ public class SQLHelper {
     private final String user = MainActivity.databaseUser;
     private final String pass = MainActivity.databasePassword;
     private String url = "jdbc:postgresql://%s:%d/%s";
-    private boolean status;
+    private boolean connectionStatus = false;
 
     public SQLHelper(Context context) {
         this.url = String.format(this.url, this.host, this.port, this.database);
         connect();
-        Toast.makeText(context, "connection status:" + status, Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, "connection connectionStatus:" + connectionStatus, Toast.LENGTH_SHORT).show();
     }
 
     private void connect() {
         try {
             Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection(url, user, pass);
-            status = true;
-            System.out.println("connected:" + status);
+            connectionStatus = true;
+            System.out.println("connected:" + connectionStatus);
         } catch (Exception e) {
-            status = false;
+            connectionStatus = false;
             System.out.print(e.getMessage());
             e.printStackTrace();
         }
@@ -55,7 +55,7 @@ public class SQLHelper {
     }
 
     public ArrayList<String> getAllFromDB() { //TODO test function by sielus
-        if (connection != null) {
+        if (connection != null && connectionStatus) {
             try {
                 int SDK_INT = android.os.Build.VERSION.SDK_INT;
                 if (SDK_INT > 8) {

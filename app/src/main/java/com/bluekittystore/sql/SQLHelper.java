@@ -3,7 +3,9 @@ package com.bluekittystore.sql;
 import android.content.Context;
 import android.os.StrictMode;
 import android.widget.Toast;
+
 import com.bluekittystore.MainActivity;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -15,8 +17,8 @@ public class SQLHelper {
     private Connection connection;
 
     private final String host = MainActivity.databaseAddressIp;
-    private final String database =  MainActivity.databaseName;
-    private final int port =  MainActivity.databasePort;
+    private final String database = MainActivity.databaseName;
+    private final int port = MainActivity.databasePort;
     private final String user = MainActivity.databaseUser;
     private final String pass = MainActivity.databasePassword;
     private String url = "jdbc:postgresql://%s:%d/%s";
@@ -29,27 +31,15 @@ public class SQLHelper {
     }
 
     private void connect() {
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Class.forName("org.postgresql.Driver");
-                    connection = DriverManager.getConnection(url, user, pass);
-                    status = true;
-                    System.out.println("connected:" + status);
-                } catch (Exception e) {
-                    status = false;
-                    System.out.print(e.getMessage());
-                    e.printStackTrace();
-                }
-            }
-        });
-        thread.start();
         try {
-            thread.join();
+            Class.forName("org.postgresql.Driver");
+            connection = DriverManager.getConnection(url, user, pass);
+            status = true;
+            System.out.println("connected:" + status);
         } catch (Exception e) {
+            status = false;
+            System.out.print(e.getMessage());
             e.printStackTrace();
-            this.status = false;
         }
     }
 

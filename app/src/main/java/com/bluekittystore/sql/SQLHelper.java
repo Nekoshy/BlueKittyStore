@@ -16,19 +16,25 @@ import java.util.ArrayList;
 public class SQLHelper {
     private Connection connection;
 
-    private final String host = MainActivity.databaseAddressIp;
-    private final String database = MainActivity.databaseName;
-    private final int port = MainActivity.databasePort;
-    private final String user = MainActivity.databaseUser;
-    private final String pass = MainActivity.databasePassword;
-    private String url = "jdbc:postgresql://%s:%d/%s";
+    private static String host = MainActivity.databaseAddressIp;
+    private static String database = MainActivity.databaseName;
+    private static int port = MainActivity.databasePort;
+    private static String user = MainActivity.databaseUser;
+    private static String pass = MainActivity.databasePassword;
+    private static String url = "jdbc:postgresql://%s:%d/%s";
     private boolean connectionStatus = false;
+    private Context context;
 
     public SQLHelper(Context context) {
-        this.url = String.format(this.url, this.host, this.port, this.database);
-        connect();
-        Toast.makeText(context, "connection connectionStatus:" + connectionStatus, Toast.LENGTH_SHORT).show();
-    }
+        this.context = context;
+        new Thread(){
+            @Override
+            public void run() {
+                SQLHelper.url = String.format(SQLHelper.url, SQLHelper.host, SQLHelper.port, SQLHelper.database);
+                connect();
+            }
+        }.start();
+    };
 
     private void connect() {
         try {
@@ -36,8 +42,10 @@ public class SQLHelper {
             connection = DriverManager.getConnection(url, user, pass);
             connectionStatus = true;
             System.out.println("connected:" + connectionStatus);
+
         } catch (Exception e) {
             connectionStatus = false;
+            System.out.println("connected:" + connectionStatus);
             System.out.print(e.getMessage());
             e.printStackTrace();
         }

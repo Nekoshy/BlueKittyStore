@@ -16,11 +16,11 @@ import java.util.ArrayList;
 public class SQLHelper {
     private Connection connection;
 
-    private static String host = MainActivity.databaseAddressIp;
-    private static String database = MainActivity.databaseName;
-    private static int port = MainActivity.databasePort;
-    private static String user = MainActivity.databaseUser;
-    private static String pass = MainActivity.databasePassword;
+    private static final String host = MainActivity.databaseAddressIp;
+    private static final String database = MainActivity.databaseName;
+    private static final int port = MainActivity.databasePort;
+    private static final String user = MainActivity.databaseUser;
+    private static final String pass = MainActivity.databasePassword;
     private static String url = "jdbc:postgresql://%s:%d/%s";
     private boolean connectionStatus = false;
     private Context context;

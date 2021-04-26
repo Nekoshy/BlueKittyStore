@@ -15,6 +15,7 @@ public class HomeViewModel extends ViewModel {
     }
 
     public ArrayList<String> testDB() {
+        sqlHelper.connect();
         ArrayList<String> myData = sqlHelper.getAllFromDB(); //test
         return myData;
     }

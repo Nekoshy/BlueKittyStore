@@ -27,6 +27,8 @@ public class SQLHelper {
 
     public SQLHelper(Context context) {
         this.context = context;
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
         new Thread(){
             @Override
             public void run() {
@@ -36,10 +38,12 @@ public class SQLHelper {
         }.start();
     };
 
-    private void connect() {
+    public void connect() {
         try {
             Class.forName("org.postgresql.Driver");
+
             connection = DriverManager.getConnection(url, user, pass);
+
             connectionStatus = true;
             System.out.println("connected:" + connectionStatus);
 
@@ -73,7 +77,7 @@ public class SQLHelper {
                     ArrayList<String> myData = new ArrayList<>();
                     Statement connectionStatement = connection.createStatement();
                     ResultSet resultSet = connectionStatement
-                            .executeQuery("SELECT * FROM DEJV");
+                            .executeQuery("SELECT * FROM TESTDATA");
                     while (resultSet.next()) {
                         myData.add(resultSet.getString(1));
                     }

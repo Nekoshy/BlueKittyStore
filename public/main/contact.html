@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Kitty Store</title>
+
+    <script src="https://kit.fontawesome.com/2a5574cd35.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="top_wraper">
+        <button class="hamburger">
+            <span class="hamburger__box">
+                <span class="hamburger__inner">Nav</span>
+            </span>
+        </button>
+        <nav class="nav">
+        <div class="nav__list">
+            <a href="index.html" class="nav__link"><div class="nav__box">Home</div></a>
+            <a href="store.html" class="nav__link"><div class="nav__box">Store</div></a>
+            <a href="about.html" class="nav__link"><div class="nav__box">About Us</div></a>
+            <a href="koszyk.html" class="nav__link"><div class="nav__box">Koszyk</div></a>
+            <a href="contact.html" class="nav__link"><div class="nav__box">Kontakt</div></a>
+        </div>    
+    </nav>
+    <p class="title_bar">Blue Kitty Store</p>
+    </div>
+    <main class="main contact">
+        <header class="main__header">Kontakt</header>
+        <section class="contact__people">
+            <ul class="contact__list">
+                <li class="contact__person">
+                    <div class="contact__information contact__information--left">
+                        <span class="contact__text">Specjalista do spraw marketingu.</span> 
+                        <span class="contact__text">Jan Kowalski</span>
+                        <span class="contact__text">Nr. telefonu XXX-XXX-XXX</span>
+                        <span class="contact__text">Email: contact-marketing@store.com</span>
+                    </div>
+                </li>
+                <li class="contact__person">
+                    <div class="contact__information contact__information--right">
+                        <span class="contact__text">Specjalista do spraw reklamacji.</span> 
+                        <span class="contact__text">Helena Nowak</span>
+                        <span class="contact__text">Nr. telefonu XXX-XXX-XXX</span>
+                        <span class="contact__text">Email: contact-reklamacja@store.com</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="contact__message">
+            <h3 class="contact__header">
+                Inne Sprawy
+            </h3>
+            <form class="contact__form">
+                <input type="text" id='name' class="contact__input" placeholder="Imie i nazwisko">
+                <input type="text" id='subject' class="contact__input" placeholder="Tytuł"> 
+                <input type="text" id='email' class="contact__input" placeholder="Email">
+                <textarea cols="30" rows="10" id='message' class="contact__textarea" placeholder="Opis Sprawy"></textarea>
+                <input type="submit" class="contact__button" value="Wyślij">
+            </form>
+            <!--<button class="contact__button">Wyślij</button>-->
+        </section>
+    </main>
+    <script src="/script/index.js"></script>
+    <script src="/script/app.js"></script>
+    </body>
+    </html>

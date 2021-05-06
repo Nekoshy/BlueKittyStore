@@ -25,6 +25,7 @@ public class ShopFragment extends Fragment {
     private ShopViewModel shopViewModel;
     private Context context;
     private View view;
+    private ArrayList<String> testDataFromDB;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         shopViewModel = new ShopViewModel();
@@ -32,14 +33,21 @@ public class ShopFragment extends Fragment {
         context = view.getContext();
         final TextView textView = view.findViewById(R.id.text_gallery);
         textView.setText(shopViewModel.getText());
-        setUpRecyclerView();
+        getDataFromDB();
+        if(testDataFromDB != null){
+            setUpRecyclerView();
+        }
 
         return view;
     }
 
+    private void getDataFromDB() {
+        testDataFromDB = shopViewModel.getDate();
+    }
+
     private void setUpRecyclerView() {
         RecyclerView recyclerView = view.findViewById(R.id.shop_recycleview);
-        ShopAdapter shopAdapter = new ShopAdapter(shopViewModel.getDate(),view);
+        ShopAdapter shopAdapter = new ShopAdapter(testDataFromDB,view);
         recyclerView.setAdapter(shopAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
     }

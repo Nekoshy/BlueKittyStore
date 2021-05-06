@@ -27,13 +27,11 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment {
     private HomeViewModel homeViewModel;
     View root;
-    private ArrayList<String> data = new ArrayList<>();
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel = new HomeViewModel();
         root = inflater.inflate(R.layout.fragment_home, container, false);
-        data = homeViewModel.testDB();
-        System.out.println(data);
+
 
         ImageView newsImageFirst = root.findViewById(R.id.news_image_first);
         ImageView newsImageSec = root.findViewById(R.id.news_image_sec);

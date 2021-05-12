@@ -6,49 +6,57 @@ const app = express();
 const nodemailer = require("nodemailer");
 
 
+//Set Vies
+
+
+
+
 const PORT = process.env.PORT || 5000;
 
 app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/media'));
 app.use(express.json());
 
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/main/index.html');
+    res.render(`${__dirname}/public/main/index`)
 });
 
-app.get('/index.html', (req, res) => {
-    res.sendFile(__dirname + '/public/main/index.html');
+app.get('/index', (req, res) => {
+    res.render(`${__dirname}/public/main/index`)
 });
 
-app.get('/about.html', (req, res) => {
-    res.sendFile(__dirname + '/public/main/about.html');
+app.get('/about', (req, res) => {
+    res.render(`${__dirname}/public/main/about`)
 });
 
-app.get('/contact.html', (req, res) => {
-    res.sendFile(__dirname + '/public/main/contact.html');
+app.get('/contact', (req, res) => {
+    res.render(`${__dirname}/public/main/contact`)
 });
 
-app.get('/item.html', (req, res) => {
-    res.sendFile(__dirname + '/public/main/item.html');
+app.get('/item', (req, res) => {
+    res.render(`${__dirname}/public/main/item`)
 });
 
-app.get('/koszyk.html', (req, res) => {
-    res.sendFile(__dirname + '/public/main/koszyk.html');
+app.get('/koszyk', (req, res) => {
+    res.render(`${__dirname}/public/main/koszyk`)
 });
 
-app.get('/podsumowanie.html', (req, res) => {
-    res.sendFile(__dirname + '/public/main/podsumowanie.html');
+app.get('/podsumowanie', (req, res) => {
+    res.render(`${__dirname}/public/main/podsumowanie`)
 });
 
-app.get('/store.html', (req, res) => {
-    res.sendFile(__dirname + '/public/main/store.html');
+app.get('/store', (req, res) => {
+    res.render(`${__dirname}/public/main/store`)
 });
 
-app.get('/zamowienie.html', (req, res) => {
-    res.sendFile(__dirname + '/public/main/zamowienie.html');
+app.get('/zamowienie', (req, res) => {
+    res.render(`${__dirname}/public/main/zamowienie`)
 });
 
-app.post('/contact.html', (req, res) => {
-    console.log(req.body);
+app.post('/contact', (req, res) => {
+
 
     const transporter = nodemailer.createTransport({
         service: 'gmail',
